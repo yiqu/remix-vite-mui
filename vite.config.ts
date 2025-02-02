@@ -22,11 +22,11 @@ export default defineConfig({
         v3_throwAbortReason: true,
       },
     }),
-    react({
-      babel: {
-        plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
-      },
-    }),
+    // react({
+    //   babel: {
+    //     plugins: [["babel-plugin-react-compiler", ReactCompilerConfig]],
+    //   },
+    // }),
     tsconfigPaths(),
   ],
 });
