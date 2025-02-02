@@ -9,5 +9,11 @@ export default defineConfig({
   ssr: {
     noExternal: process.env.NODE_ENV === "production" ? [/^@mui\//] : [],
   },
-  plugins: [remix(), tsconfigPaths()],
+  plugins: [remix({
+    future: {
+      v3_fetcherPersist: true,
+      v3_relativeSplatPath: true,
+      v3_throwAbortReason: true
+    }
+  }), tsconfigPaths()],
 });
